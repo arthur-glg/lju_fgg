@@ -336,14 +336,13 @@ We can report on the following efforts :
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename D:/lju_fgg/lju_fgg/hydroelectric_power/TD/TD1/images/schema_forces.png
 	display false
-	scale 90
 
 \end_inset
 
@@ -503,7 +502,7 @@ To reduce the effect of uplift, draingaes to the ground are installed in
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $r_{u}=\frac{2}{3}.B$
+\begin_inset Formula $r_{U}=\frac{2}{3}.B$
 \end_inset
 
 
