@@ -11,7 +11,7 @@ h0=b0/m
 gconc=24
 H0=H-6
 G1=b0*H*gconc
-G2=0.5*(B-b0)*(H-H0)*gconc
+G2=0.5*(B-b0)*(H-h0)*gconc
 rG1=B-(b0/2)
 rG2=(2/3)*(B-b0)
 #hydrostatic pressure
@@ -25,10 +25,10 @@ ru=(2/3)*B
 #silt pressure
 gs=18
 Hs=H0/3
-Ps=gs*0.5*H0*H0
+Ps=gs*0.5*Hs*Hs
 rs=Hs/3
 '''security factors check'''
-nsl=(G1+G2-Pu)/(Pw+Ps)
+nsl=(G1+G2-Pu)/(Pw-Ps)
 print("nsl=",nsl)
 nov=(G1*rG1+G2*rG2)/(Pw*rw+Ps*rs+Pu*ru)
 print("nov=",nov)
