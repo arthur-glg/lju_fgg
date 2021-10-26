@@ -1,2 +1,5 @@
-spatial plan for flood protection\cliped shape
-\spatial plan for flood protection\data
+*.cst
+*.dbf
+*.prj
+*.shp
+*.shx
