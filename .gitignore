@@ -3,3 +3,7 @@
 *.prj
 *.shp
 *.shx
+*.cpg
+*.sbn
+*.shp.xml
+*.xml
