@@ -51,7 +51,7 @@ Kst=Est/(2*g*Fk**2)
 #FRICTION LOSS
 Lambda=0.012
 Lk=2400
-Klin=(Lambda*Lk/D)*(1/Fk)
+Klin=(Lambda*Lk/D)*(1/Fk**2)*(1/(2*g))
 
 '''___Final calculus___'''
 Dh1=(Q**2)*(Kvt+Kres+Kzoz+Kzap+Klom+Klom+Kst+Klin)
