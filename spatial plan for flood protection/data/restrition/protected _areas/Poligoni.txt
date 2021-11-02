@@ -1,0 +1,2 @@
+Podatkovni niz prikazuje prostorsko razporeditev obmoèij v Sloveniji, ki so zavarovana po predpisih o ohranjanju narave.
+Zavarovana obmoèja se po Zakonu o ohranjanju narave delijo na ožja zavarovana obmoèja (naravni spomenik, strogi naravni rezervat in naravni rezervat) in širša zavarovana obmoèja (narodni, regijski in krajinski park).

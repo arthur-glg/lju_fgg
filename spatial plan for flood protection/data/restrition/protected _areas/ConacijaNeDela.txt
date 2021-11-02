@@ -1,0 +1,1 @@
+Podatkovni niz prikazuje cone zavarovanih obmoèij, kot so doloèene v predpisih o zavarovanju doloèenega zavarovanega obmoèja.

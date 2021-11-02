@@ -1,0 +1,5 @@
+Podatkovni niz prikazuje prostorsko razporeditev ekološko pomembnih obmoèij v Sloveniji, 
+ki so bila sprejeta z Uredbo o ekološko pomembnih obmoèjih (Uradni list RS, štev. 48/04). 
+Ekološko pomembno obmoèje je po Zakonu o ohranjanju narave obmoèje habitatnega tipa, dela 
+habitatnega tipa ali veèje ekosistemske enote, ki pomembno prispeva k ohranjanju biotske 
+raznovrstnosti. Podatki so primerni za prikaz v merilu 1:25 000.
