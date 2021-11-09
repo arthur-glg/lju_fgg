@@ -7,19 +7,16 @@ def coef(Dmin):
     g=9.81
 
     ##CHANGE OF GEOMETRY DOWNTREAM OF THE SURGETANK##
-    L=160
-    z=0.25
-    K=(g*z)/(sqrt(1+z))
-    Hb=(H)/(1+0.25)
-    Tz=5
+    v=5
+    Ac=Q/v
     Ezoz1=0.1
-    Fk=15.241613383610877
+    Fk=18.075123574829497
     Fc=(pi*Dmin**2)/4
     Kzoz1=(Ezoz1)/(2*g*Fk**2)*(((Fk**2)/(Fc**2))-1)
 
     ##HYDRAULIC GATES IN THE PENSTOCK##
     Ezoz2=0.1
-    a=Dmin
+    a=3.2
     Fzap=a**2
     Kzoz2=(Ezoz2)/(2*g*Fc**2)*(((Fc**2)/(Fzap**2))-1)
 
@@ -47,7 +44,7 @@ def coef(Dmin):
     Qj=Q/2
     Fj=Qj/vj
     Ezoz=0.1
-    Kzozj=Ezoz/(2*g*Fc**2)*((Fc**2)/(Fj**2)-1)
+    Kzozj=(Ezoz/(2*g*Fc**2))*(((Fc**2)/(Fj**2))-1)
     Kzozjp=Kzozj/4
 
     ##TURBINE INLET VALVE##
@@ -58,7 +55,7 @@ def coef(Dmin):
     ##FRICTION LOSSES##
     Lc=160
     Lambda=0.0118
-    Klin=(Lambda*Lc)/(Dmin*Fc*2*g)
+    Klin=(Lambda*Lc)/(Dmin*Fc**2*2*g)
 
     ##DRAFT TUBE##
     vout=1.5

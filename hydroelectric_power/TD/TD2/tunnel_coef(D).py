@@ -12,17 +12,17 @@ def coef(D):
 
     #TRASHRACKS
     Chi=1
-    Beta=1
+    Beta=2.42
     s=10*10**(-3)
     l=50*10**(-3)
-    alpha=1.22
+    alpha=70
     Eres=Chi*Beta*((s/l)**(4/3))*sin(alpha)
     Fres=Fvt
     Kres=Eres/(2*g*Fres**2)
 
     #NARROWING OF THE TUNNEL
     Fzap=D**2
-    Ezoz=0.365
+    Ezoz=0.34
     Kzoz=(Ezoz/(2*g*Fres**2))*((Fres**2/Fzap**2)-1)
 
     #MAIN HYDRAULIC GATES
@@ -32,8 +32,8 @@ def coef(D):
     #CHANGE OF GEOMETRY
     Fk=(pi*D**2)/4
     r=D/2
-    Etran=0.105
-    Ktran=(Etran/(2*g*Fzap**2))*((Fzap**2/Fk**2)-1)
+    Etran=0.11
+    Ktran=(Etran/(2*g*Fzap**2))*(Fzap**2/Fk**2-1)
 
     #CURVATURE OF THE TUNNEL AXIS
     def Elom(a,R):
@@ -49,9 +49,10 @@ def coef(D):
     Kst=Est/(2*g*Fk**2)
 
     #FRICTION LOSS
+    ng=0.0013
     Lambda=0.012
-    Lk=2400
-    Klin=(Lambda*Lk/D)*(1/Fk**2)*(1/(2*g))
+    Lk=2600
+    Klin=(Lambda*Lk)/((Fk**2)*D*2*g)
 
     return(Kvt+Kres+Kzoz+Kzap+Klom+Klom+Kst+Klin)
 

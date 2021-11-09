@@ -187,3 +187,171 @@ Using the same formula, we obtain : $H_d(b_{min})=3,9$ m.
 
 ![](D:\lju_fgg\lju_fgg\hydroelectric_power\TD\TD1\pdf autocad\montage autocad.png)
 
+<div style="page-break-after: always; break-after: page;"></div>
+
+## Task 3:  Design the intake structure for the powerhouse, route water to the powerhouse and  further to the stilling basin downstream of the dam
+
+![](D:\lju_fgg\lju_fgg\hydroelectric_power\TD\TD1\images\schema_perte.png)
+
+<center><em>Figure 4 : Design of the waterway to the powerhouse</em></center>
+
+We are now going to calculate all of the losses from the pressure tunnel entrance to the regulation basin. As shown in the previous figure we separate the calculations into three parts:
+
+- $\Delta h_1$ : head loss in the pressure tunnel, 
+- $\Delta h_2$ : penstock losses, 
+- $\Delta h_3$ : draft tube ones. 
+
+These losses are defined as lengths corresponding to the dissipation of the mechanical energy of a moving fluid. 
+$$
+\Delta h_i = \xi_i\frac{v_i^2}{2g}=\xi_i \frac{Q_i^2}{F_i^2. 2g} = K_i.Q_i^2
+$$
+We are then interested in two types of losses: local losses and frictional losses. 
+
+### Hydraulic losses in the pressure tunnel
+
+![](D:\lju_fgg\lju_fgg\hydroelectric_power\TD\TD1\images\scheme_intake.png)
+
+<center><em>Figure 5 :Scheme of the intake structure of the pressure tunnel</em></center>
+
+<u>With :</u>
+
+- $(1)$ : the intake,
+- $(2)$ : the trash-racks,
+- $(3)$ : a transition from the quadratic intake profile to gate profile, 
+- $(4)$ : main hydraulic gates,
+- $(5)$ : transition from gate profile to tunnel profile, 
+- $(6)$ : the pressure tunnel. 
+
+**$(1)$ The intake** 
+
+$\xi_{Vt}=0,5$
+$K_{Vt}=\frac{\xi_{Vt}}{F_{Vt}^2.2g}=\frac{0,5}{71^2.2.9,81}=5,05e-06$ , avec $F_{Vt}=A_p$
+
+**$(2)$ The trash-racks** 
+
+<u>Some notations :</u>
+
+- $\alpha=70°$, the inclination of the trash-racks
+- $\chi=1$, the flow coefficient ($=1$ because of the horizontal flow)
+- $s=10$ mm, width of individual trash-rack bar
+- $l=50$ mm, distance between each bars 
+- $\beta=2,42$, the trash-rack bar geometry coefficient
+
+$\xi_{res}=\chi.\beta\left(\frac{s}{l}\right)^{\frac{4}{3}}.sin(\alpha)=0,219$
+
+ $K_{res}=\frac{\xi_{res}}{F_{res}^2.2g}=2,21e-06$
+
+**$(3)$ Narrowing of the tunnel** 
+
+<u>To estimate $\underline{\xi_{zoz}}$</u> : 
+
+|  $F_2/F_1$  | $0,01$ | $0,1$  | $0,2$ | $0,4$ | $0,6$ | $0,8$ |
+| :---------: | :----: | :----: | :---: | :---: | :---: | :---: |
+| $\xi_{zoz}$ | $0,5$  | $0,45$ | $0,4$ | $0,3$ | $0,2$ | $0,1$ |
+
+With a linear interpolation we get : $\xi_{zoz}=0,34$ 
+$K_{zoz}=\frac{\xi_{zoz}}{F_{res}^2.2g}\left(\frac{F_{res}^2}{F_{zap}^2}-1\right)=2,92e-05$
+
+**$(4)$ Main hydraulic gates**
+
+$\xi_{zap}=0,1$
+$K_{zap}=\frac{\xi_{zap}}{F_{zap}^2.2g}=9,62e-06$ 
+
+**$(5)$ Changing of geomtry**
+
+With a linear interpolation we get : $\xi_{tran}=0,11$ 
+
+$K_{tran}=\frac{\xi_{tran}}{F_{zap}^2.2g}\left(\frac{F_{zap}^2}{F_{k}^2}-1\right)=6,57e-06$
+
+**Curvature of the tunnel axis**
+
+We have four turn in the tunnel, described as :
+
+| Angle of the turn | Radius of the tunnel axis |
+| :---------------: | :-----------------------: |
+|  $\alpha_1=90°$   |    $R_1=70 \text{ m}$     |
+|  $\alpha_2=47°$   |    $R_2=110 \text{ m}$    |
+|  $\alpha_3=16°$   |    $R_3=150 \text{ m}$    |
+|  $\alpha_4=24°$   |    $R_4=150 \text{ m}$    |
+
+and : $\xi_{lom,i}=(0,13+1,85\left(\frac{r}{R_i}\right)^{3,5})\frac{\alpha_i}{90}$
+
+$K_{lom}= \sum\limits_{i=1}^{n=4}\frac{\xi_{lom,i}}{F_k^2.2g}=4,01e-05$
+
+**Surge tank**
+
+$\xi_{st}=0,1$
+$K_{st}=\frac{\xi_{st}}{F_k^2.2g}=1,56e-05$
+
+**Friction losses**
+
+<u>Some notations :</u>
+
+- $\lambda=0,012$, Dracy-Weisnbach coefficient
+- $L_K=2600\text{ m}$
+
+$K_{lin}=\frac{\lambda.L_k}{D}\frac{1}{F_k^2}\frac{1}{2g}=0,0010$
+
+<u>**Summation of the hydraulic losses in the pressure tunnel :**</u>
+$$
+\Delta h_1 =Q^2(K_{Vt}+K_{res}+K_{zoz}+K_{zap}+K_{lom}+K_{st}+K_{lin}) \\
+$$
+==We have for hydraulic losses in the tunnel $\Delta h_1 = 5,83 \text{ m}$==
+
+*Calculation were made using python, following the next script*
+
+```python
+from math import *
+
+'''Declaration of variables'''
+Q=71
+g=9.81
+
+#INTAKE
+Evt=0.5
+Fvt=71
+Kvt=Evt/(2*g*Fvt**2)
+#TRASHRACKS
+Chi=1
+Beta=2.42
+s=10*10**(-3)
+l=50*10**(-3)
+alpha=70
+Eres=Chi*Beta*((s/l)**(4/3))*sin(alpha)
+Fres=Fvt
+Kres=Eres/(2*g*Fres**2)
+#NARROWING OF THE TUNNEL
+D=0.62*(Q**0.48)
+Fzap=D**2
+Ezoz=0.34
+Kzoz=(Ezoz/(2*g*Fres**2))*((Fres**2/Fzap**2)-1)
+#MAIN HYDRAULIC GATES
+Ezap=0.1
+Kzap=Ezap/(2*g*Fzap**2)
+#CHANGE OF GEOMETRY
+Fk=(pi*D**2)/4
+r=D/2
+Etran=0.11
+Ktran=(Etran/(2*g*Fzap**2))*(Fzap**2/Fk**2-1)
+#CURVATURE OF THE TUNNEL AXIS
+def Elom(a,R):
+    return((0.13+1.85*(r/R)**3.5)*(a/90))
+Elom1=Elom(90,70)
+Elom2=Elom(47,110)
+Elom3=Elom(16,150)
+Elom4=Elom(25,150)
+Klom=(Elom1+Elom2+Elom3+Elom4)/(2*g*Fk**2)
+#SURGE TANK
+Est=0.1
+Kst=Est/(2*g*Fk**2)
+#FRICTION LOSS
+ng=0.0013
+Lambda=0.012
+Lk=2600
+Klin=(Lambda*Lk)/((Fk**2)*D*2*g)
+
+'''___Final calculus___'''
+Dh1=(Q**2)*(Kvt+Kres+Kzoz+Kzap+Klom+Klom+Kst+Klin)
+print("Δh1=",Dh1)
+```
+
