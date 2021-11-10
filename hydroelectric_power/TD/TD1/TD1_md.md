@@ -8,6 +8,10 @@
 
 [TOC]
 
+------
+
+![](D:\lju_fgg\lju_fgg\hydroelectric_power\TD\TD1\images\fond.png)
+
 <div style="page-break-after: always; break-after: page;"></div>
 
 ## Task 1: Determine the design of a gravity dam, height H to satisfy safety factors against sliding and overturning.
@@ -298,7 +302,7 @@ $$
 $$
 ==We have for hydraulic losses in the tunnel $\Delta h_1 = 5,83 \text{ m}$==
 
-*Calculation were made using python, following the next script*
+*Calculation were made using python, following this script*
 
 ```python
 from math import *
@@ -354,4 +358,164 @@ Klin=(Lambda*Lk)/((Fk**2)*D*2*g)
 Dh1=(Q**2)*(Kvt+Kres+Kzoz+Kzap+Klom+Klom+Kst+Klin)
 print("Δh1=",Dh1)
 ```
+
+### Hydraulic losses in the penstock 
+
+![](D:\lju_fgg\lju_fgg\hydroelectric_power\TD\TD1\images\scheme_losses_penstock.png)
+
+<center><em>Figure 6 : Scheme of the penstock pipes</em></center>
+
+**Change of geometry at the dowstream of the surgetank**
+
+$\xi_{zoz,1}=0,1$
+
+$K_{zoz,1}=\frac{\xi_{zoz,1}}{F_{k}^2.2g}\left(\frac{F_{k}^2}{F_{c}^2}-1\right)=9,67e-06$
+
+**Change of geometry before th hydraulic gates in the penstock**
+
+$\xi_{zoz,2}=0,1$
+$F_{zap}=a^2$  and  $K_{zoz,2}=\frac{\xi_{zoz,2}}{F_{c}^2.2g}\left(\frac{F_{c}^2}{F_{zap}^2}-1\right)=2,33e-05$
+
+**Hydraulic gates**
+
+$\xi_{zap}=0,2$
+$K_{zap}=\frac{\xi_{zap}}{F_{zap^2.2g}}=9,72e-05$
+
+**Change of geometry after the hydraulic gates**
+
+$\delta=8°$ implies that $c=0,13$ in the formula $\xi_{raz}=c\left(1- \frac{F_{zap}}{F_c} \right)=0,036$
+$K_{raz}=\frac{\xi_{raz}}{F_{zap}^2.2g}=1,76e-05$
+
+**Change of the penstock axis**
+
+| Angle of the turn | Radius of the tunnel axis |
+| :---------------: | :-----------------------: |
+|   $\alpha_1=9°$   |    $R_1=50 \text{ m}$     |
+|  $\alpha_2=17°$   |    $R_2=50 \text{ m}$     |
+
+As  in the previous section we calculate $\xi_{lom,1}$ and $\xi_{lom,2}$. 
+
+$K_{lom}=\frac{\xi_{lom,1}+\xi_{lom,2}}{F_c^2.2g}=9,49e-06$
+
+**Division of the penstock**
+
+<u>First :</u>
+$\xi_{raz,2}=0,2$ and $K_{raz,2}=\frac{\xi_{raz,2}}{F_c^2.2g}=5,05e-05$
+
+<u>Second :</u>
+
+$F_j$ the circular surface defined by the diameter $D_j$ can be determinated based on the water velocity before entering the turbine : $v_j=7m.s^{-1}$ at $Q_j=\frac{Q}{2}$.
+
+We have $F_j=\frac{Q_j}{v_j}$ in the equation, $K_{zozj}=\frac{\xi_{zoz}}{F_{c}^2.2g}\left(\frac{F_{c}^2}{F_{j}^2}-1\right)=1,72e-04$ 
+For the other branch : $K'_{zozj}=\frac{K_{zozj}}{4}=4,32e-05$
+
+**Turbine inlet valve**
+
+$\xi_{lop}=0,12$
+$K_{lop}=\frac{\xi_{lop}}{F_j^2.2g}=2,37e-04$
+
+And for second branch : $K'_{lop}=\frac{K_{lop}}{4}=5,94e-05$
+
+**Friction losses**
+
+- The lenght of the penstock is $L_c=160 \text{ m}$
+- $\lambda = 0,0118$
+
+$K_{lin}=\frac{\lambda.L_c}{D}\frac{1}{F_c^2}\frac{1}{2g}=1,12e-04$
+
+<u>**Summation of the hydraulic losses in the penstock :**</u>
+$$
+\Delta h_1 =Q^2(K_{zoz,1}+K_{zoz,2}+K_{zap}+K_{raz,1}+K_{lom}+K_{zozj}+K_{zozj}'+K_{lop}+K_{lop}'+K_{lin}) \\
+$$
+==We have for hydraulic losses in the penstock $\Delta h_1 = 3,95 \text{ m}$==
+
+*Calculation were made using python, following this script*
+
+```python
+from math import *
+
+'''Declaration of variables'''
+Q=71
+H=Q
+g=9.81
+
+##CHANGE OF GEOMETRY DOWNTREAM OF THE SURGETANK##
+v=5
+Ac=Q/v
+Dmin=2*sqrt(Ac/pi)
+Ezoz1=0.1
+Fk=18.075123574829497
+Fc=(pi*Dmin**2)/4
+Kzoz1=(Ezoz1)/(2*g*Fk**2)*(((Fk**2)/(Fc**2))-1)
+##HYDRAULIC GATES IN THE PENSTOCK##
+Ezoz2=0.1
+a=3.2
+Fzap=a**2
+Kzoz2=(Ezoz2)/(2*g*Fc**2)*(((Fc**2)/(Fzap**2))-1)
+##HYDRAULIC GATES##
+Ezap=0.2
+Kzap=Ezap/(2*g*Fzap**2)
+##CHANGE OF GEOMETRY##
+c=0.13
+Eraz1=c*(1-(Fzap/Fc))
+Kraz1=Eraz1/(2*g*Fzap**2)
+##CHANGE OF PENSTOCK AXIS##
+def Elom(a,R):
+    r=Dmin/2
+    return((0.13+1.85*(r/R)**3.5)*(a/90))
+Elom1=Elom(9,50)
+Elom2=Elom(17,50)
+Klom=(Elom1+Elom2)/(2*g*Fc**2)
+##DIVISION OG THE PENSTOCK##
+Eraz2=0.2
+Kraz2=Eraz2/(2*g*Fc**2)
+vj=7
+Qj=Q/2
+Fj=Qj/vj
+Ezoz=0.1
+Kzozj=(Ezoz/(2*g*Fc**2))*(((Fc**2)/(Fj**2))-1)
+Kzozjp=Kzozj/4
+##TURBINE INLET VALVE##
+Elop=0.12
+Klop=Elop/(2*g*Fj**2)
+Klopp=Klop/4
+##FRICTION LOSSES##
+Lc=160
+Lambda=0.0118
+Klin=(Lambda*Lc)/(Dmin*Fc**2*2*g)
+
+'''___Final calculus___'''
+Dh2=(Q**2)*(Kzoz1+Kzoz2+Kzap+Kraz1+Klom+Kzozj+Kzozjp+Klop+Klopp+Klin)
+```
+
+### Hydraulic losses in the draft tube 
+
+In th draft tube we know the velocity of the water $v_{out}=1,5 \space m.s^{-1}$, we can determine the surface of the tube $F_{out}=\frac{Q}{v_{out}}$ .
+
+<u>Then :</u>
+
+$\xi_{out}=2$
+$K_{out}=\frac{\xi_{out}}{F_{out}^2.2g}=4,54e-05$
+
+==We can calculate the loss in the draft tube : $\Delta h_3=Q^2.K_{out}=0,23$ m==
+
+*Calculation were made using python, following this script*
+
+```python
+##DRAFT TUBE##
+vout=1.5
+Fout=Q/vout
+Eout=2
+Kout=Eout/(2*g*Fout**2)
+
+Dh3=Kout*Q**2
+```
+
+### Conclusion 
+
+The total loss in the entire system is ==$\Delta h=\Delta h_1+\Delta h_2+\Delta h_3 =10$ m==
+
+The net utilizable design fall is therefore : ==$H_{net}=H-\Delta h=71-10=61$ m==
+
+
 
