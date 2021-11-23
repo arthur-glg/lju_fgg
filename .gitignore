@@ -7,3 +7,6 @@
 *.sbn
 *.shp.xml
 *.xml
+*.TIF
+*.ovr
+*.TIF.ovr
