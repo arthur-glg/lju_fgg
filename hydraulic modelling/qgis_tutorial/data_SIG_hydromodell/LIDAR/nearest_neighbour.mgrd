@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAGA_METADATA>
+  <HISTORY saga-version="2.3.2">
+    <MODULE library="grid_gridding" id="2" name="Nearest Neighbour">
+      <OPTION type="table_field" id="FIELD" name="Attribute" index="2">field_3</OPTION>
+      <OPTION type="choice" id="TARGET_DEFINITION" name="Target Grid System" index="0">user defined</OPTION>
+      <OPTION type="double" id="TARGET_USER_SIZE" name="Cellsize">1.000000</OPTION>
+      <OPTION type="double" id="TARGET_USER_XMIN" name="Left">575999.000000</OPTION>
+      <OPTION type="double" id="TARGET_USER_XMAX" name="Right">576999.000000</OPTION>
+      <OPTION type="double" id="TARGET_USER_YMIN" name="Bottom">169999.000000</OPTION>
+      <OPTION type="double" id="TARGET_USER_YMAX" name="Top">171000.000000</OPTION>
+      <OPTION type="choice" id="TARGET_USER_FITS" name="Fit" index="0">nodes</OPTION>
+      <INPUT type="shapes" id="SHAPES" name="Points">
+        <FILE>C:/Users/guill/AppData/Local/Temp/processing_mLDfhp/655c8c6cb9424de8997e53e99243c4f6/SHAPES.shp</FILE>
+      </INPUT>
+      <OUTPUT type="grid" id="TARGET_OUT_GRID" name="Target Grid">field_3 [Nearest Neighbour]</OUTPUT>
+    </MODULE>
+  </HISTORY>
+  <SOURCE>
+    <FILE>D:\lju_fgg\lju_fgg\hydraulic modelling\qgis_tutorial\data_SIG_hydromodell\LIDAR\nearest_neighbour.sgrd</FILE>
+    <DATABASE></DATABASE>
+    <PROJECTION>
+      <OGC_WKT>PROJCS["Slovenia_1996_Slovene_National_Grid",GEOGCS["GCS_Slovenia_1996",DATUM["D_Slovenia_Geodetic_Datum_1996",SPHEROID["GRS_1980",6378137.0,298.257222101]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",-5000000.0],PARAMETER["Central_Meridian",15.0],PARAMETER["Scale_Factor",0.9999],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]</OGC_WKT>
+      <PROJ4>+proj=tmerc +a=6378137.000000 +b=6356752.314140 +x_0=500000.0 +y_0=-5000000.0 +lon_0=15.0 +k_0=0.9999 +lat_0=0.0 +no_defs</PROJ4>
+      <EPSG>-1</EPSG>
+    </PROJECTION>
+  </SOURCE>
+  <DESCRIPTION></DESCRIPTION>
+</SAGA_METADATA>

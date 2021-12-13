@@ -1,0 +1,347 @@
+Geom Title=geometry
+Program Version=6.10
+Viewing Rectangle= 0.475759999638796 , 0.500240000003576 , 0.806 , 0.194 
+
+River Reach=Mura            ,Mura            
+Reach XY= 2 
+             0.5             0.8             0.5             0.2
+Rch Text X Y=0.5,0.65
+Reverse River Text= 0 
+
+Type RM Length L Ch R = 1 ,3266.039,101.99,101.62,101.31
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,3164.415,104.63,100.24,95.66
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,3064.175,133.76,128.14,122.43
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,2936.031,71.36,72.52,73.79
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,2863.511,98.18,100.5,103.55
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,2763.015,103.81,100.94,97.48
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,2662.073,75.5,77.74,80.24
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,2584.337,128.58,120.51,119.76
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,2463.824,100.59,100.63,100.77
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,2363.19 ,102.12,100.29,99.21
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,2262.899,54.34,52.04,51.28
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,2210.857,49.67,48.22,46.98
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,2162.639,105.26,101.57,98.25
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,2061.074,102.44,99.92,97.23
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,1961.153,105.41,100.85,95.77
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,1860.303,103.04,100.14,96.94
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,1760.159,103.92,101.06,98.33
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,1659.096,103.7,98.96,94.42
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,1560.134,78.26,78.54,78.61
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,1481.596,125.66,122.71,118.97
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,1358.882,102.4,99.5,97.23
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,1259.381,104.05,99.7,96.01
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,1159.677,103.92,100.47,96.65
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,1059.204,101.59,99.17,97.05
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,960.0338,100.1,99.62,99.06
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,860.418 ,101.6,101.36,101.08
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,759.0589,99.09,98.94,98.84
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,660.1227,99.77,100.3,101.13
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,559.8267,92.86,99.31,106
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,460.5158,37.02,37.38,37.47
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,423.1333,63.21,64.79,66.28
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,358.3433,96.37,99.21,102.51
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,259.1341,98.72,101.36,104.43
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,157.77  ,97.54,101.17,110.36
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,56.59809,52.53,56.6,48.38
+Node Last Edited Time=déc/07/2021 11:36:10
+#Sta/Elev= 0 
+#Mann= 0 ,0,0
+Bank Sta=,
+XS Rating Curve= 0 ,0
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0.3,0.1
+
+LCMann Time=déc/30/1899 00:00:00
+LCMann Region Time=déc/30/1899 00:00:00
+LCMann Table=0
+Chan Stop Cuts=-1 
+
+
+
+Use User Specified Reach Order=0
+GIS Units=
+GIS DTM Type=TIN
+GIS DTM=\
+GIS Stream Layer=\mura
+GIS Cross Section Layer=\XSCutLines
+GIS Map Projection=
+GIS Projection Zone=
+GIS Datum=
+GIS Vertical Datum=
+GIS Data Extents=0,0,0,0
+
+GIS Ratio Cuts To Invert=-1
+GIS Limit At Bridges=0
+Composite Channel Slope=5

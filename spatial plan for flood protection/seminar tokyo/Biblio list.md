@@ -1,0 +1,6 @@
+- [x] **(Brimblecombe, 2020)** Mapping Climate Change, Natural Hazards and Tokyo’s Built Heritage
+- [x] **(Seino, 2018)** Numerical simulation of urban impact on precipitation in Tokyo: How does urban temperature rise affect precipitation?
+- [x] **(Oh, 2021)** Possible impact of urbanization on extreme precipitation–temperature relationship in East Asian megacities
+- [x] **(Tokyo Climate Center, 2018)** Primary Factors behind the Heavy Rain Event of July 2018 and the Subsequent Heatwave in Japan from Mid-July Onward
+- [x] **(Stalenberg, 2009)** The Battle of Tokyo and Dhaka Against Floods
+- [x] **(Matsumoto, 2017)** Urban climate in the Tokyo metropolitan area in Japan

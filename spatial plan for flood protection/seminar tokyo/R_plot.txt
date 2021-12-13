@@ -1,0 +1,26 @@
+library(ggplot2)
+data <- read.csv("D:\\lju_fgg\\lju_fgg\\spatial plan for flood protection\\seminar tokyo\\level_preipitation.csv",
+                 sep = ";")
+
+
+ggplot(data, aes(x=date, y=water)) + 
+  geom_bar(stat="identity",fill="#aebeb3")+
+  geom_text(aes(label=water), vjust=1.6, color="white", size=3.5)+
+  xlab(" ")+
+  ylab("Quantity of water (mm)")+
+  theme_minimal()
+  
+______________________
+
+library(ggplot2)
+data <- read.csv("D:\\lju_fgg\\lju_fgg\\spatial plan for flood protection\\seminar tokyo\\level_preipitation.csv",
+                 sep = ";")
+
+
+ggplot(data, aes(x=date, y=water)) + 
+  geom_bar(stat="identity",fill="#aebeb3")+
+  geom_text(aes(label=water), vjust=1.6, color="white", size=3.5)+
+  xlab(" ")+
+  ylab("Quantity of water (mm)")+
+  theme_minimal()
+  

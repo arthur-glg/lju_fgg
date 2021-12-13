@@ -9,7 +9,7 @@ h0=b0/m
 '''Load combination'''
 #dead load
 gconc=24
-H0=H-6
+H0=H
 G1=b0*H*gconc
 G2=0.5*(B-b0)*(H-h0)*gconc
 rG1=B-(b0/2)

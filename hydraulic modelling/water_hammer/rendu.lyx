@@ -1,0 +1,685 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1.5cm
+\topmargin 2cm
+\rightmargin 1.5cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+Computation concerning a water hammer
+\end_layout
+
+\begin_layout Author
+Arthur Guillot - Le Goff
+\end_layout
+
+\begin_layout Date
+Autumn semester 2021 - Hydraulic modelling
+\end_layout
+
+\begin_layout Section*
+Introduction 
+\end_layout
+
+\begin_layout Standard
+This exercise focus on the calculus of the water pressure and the velocity
+ at three different locations (point A, B and C) on a 
+\begin_inset Formula $2040$
+\end_inset
+
+ m horizontal pipe.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D:/lju_fgg/lju_fgg/hydraulic modelling/water_hammer/IMAGES/schema.png
+	display false
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Scheme of the problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Our starting point is the following equations :
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+the continuity equation for flow under pressure :
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\frac{a^{2}}{g}\cdot\frac{\partial v}{\partial x}+v\frac{\partial H}{\partial x}+\frac{\partial H}{\partial t}+v\cdot\sin\theta=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+and the momentum equation for flow under pressure :
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\frac{\partial v}{\partial t}+v\frac{\partial v}{\partial x}+g\frac{\partial H}{\partial x}+\frac{\lambda v|v|}{2D}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As we are trying to calculate 
+\begin_inset Formula $H$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ at any time 
+\begin_inset Formula $t$
+\end_inset
+
+ we are using the method of characteristics to get an accurate estimates
+ of these values.
+ We are therefore going to described 
+\begin_inset Formula $H(t,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $v(t,x)$
+\end_inset
+
+ such as : 
+\begin_inset Formula $dH=\frac{\partial H}{\partial x}dx+\frac{\partial H}{\partial t}dt$
+\end_inset
+
+ and 
+\begin_inset Formula $dv=\frac{\partial v}{\partial x}dx+\frac{\partial v}{\partial t}dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\SpecialChar allowbreak
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Our exercise focus on three different scenario that we need to analyse :
+\end_layout
+
+\begin_layout Enumerate
+instantaneous closure in point C, friction neglected,
+\end_layout
+
+\begin_layout Enumerate
+instantaneous closure in point C, friction coefficient 
+\begin_inset Formula $\lambda=0,032$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+gradual closure in 8 seconds in point C, friction coefficient 
+\begin_inset Formula $\lambda=0,032$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+6) Graphs x-t, v-H and H(t) 
+\end_layout
+
+\begin_layout Standard
+Before going to our calculation we drew few graphs representing the results
+ we are expecting.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename D:/lju_fgg/lju_fgg/hydraulic modelling/water_hammer/IMAGES/q6.png
+	lyxscale 80
+	display false
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+7) Calculation of the water hammer 
+\end_layout
+
+\begin_layout Subsection*
+Methodology 
+\end_layout
+
+\begin_layout Standard
+To get a glimpse at the methodology we can detailed my excel calculation
+ sheet as it follow.
+ First I have clarified the different constants useful for our calculations.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename IMAGES/constants.png
+	display false
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Calculation constants used 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+For our calculation we have to divide the equations used in four parts:
+\end_layout
+
+\begin_layout Itemize
+the 
+\begin_inset Formula $t=0$
+\end_inset
+
+ equations (identified as blue backgroud in the next figure)
+\end_layout
+
+\begin_layout Itemize
+the left boundary of the pipe (green)
+\end_layout
+
+\begin_layout Itemize
+the right boundary of the pipe (yellow)
+\end_layout
+
+\begin_layout Itemize
+the internal points (orange)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename IMAGES/table calcul.png
+	display false
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Extract from the calculation table
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\bar under
+For the internal points we use :
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{gathered}H_{Pi}=0,5\left[H_{i-1}+H_{i+1}+\frac{a}{g}\left(v_{i-1}-v_{i+1}\right)-\sin\theta\Delta t\left(v_{i-1}+v_{i+1}\right)\right.\left.-\frac{a\lambda\Delta t}{2gD}\left(v_{i-1}\left|v_{i-1}\right|-v_{i+1}\left|v_{i+1}\right|\right)\right]\end{gathered}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{gathered}v_{Pi}=0,5\left[v_{i-1}+v_{i+1}+\frac{g}{a}\left(H_{i-1}-H_{i+1}\right)-\frac{g}{a}\sin\theta\Delta t\left(v_{i-1}-v_{i+1}\right)\right.\left.-\frac{\lambda\Delta t}{2D}\left(v_{i-1}\left|v_{i-1}\right|+v_{i+1}\left|v_{i+1}\right|\right)\right]\end{gathered}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+For the left boundary :
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{Pi}=H_{0}-\frac{v_{0}^{2}}{2g}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{gathered}v_{Pi,t=T-\Delta t}=0,5\left[v_{1}+v_{2}+\frac{g}{a}\left(H_{1}-H_{2}\right)-\frac{g}{a}\sin\theta\Delta t\left(v_{1}-v_{2}\right)\right.\left.-\frac{\lambda\Delta t}{2D}\left(v_{1}\left|v_{1}\right|+v_{2}\left|v_{2}\right|\right)\right]\end{gathered}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+For the right boundary :
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{gathered}H_{Pi,t=T-\Delta t}=0,5\left[H_{10}+H_{9}+\frac{a}{g}\left(v_{9}-v_{10}\right)-\sin\theta\Delta t\left(v_{9}+v_{10}\right)\right.\left.-\frac{a\lambda\Delta t}{2gD}\left(v_{9}\left|v_{9}\right|-v_{10}\left|v_{10}\right|\right)\right]\end{gathered}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{Pi}=\tau.v_{0}\sqrt{\frac{H_{Pi}}{H_{0}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+For 
+\begin_inset Formula $t=0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{Pi}=H_{0}-\frac{v_{0}^{2}}{2g}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{Pi}=v_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Results for scenario 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Graphics
+	filename IMAGES/scenario 1.png
+	display false
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $H(t)$
+\end_inset
+
+ and 
+\begin_inset Formula $v(t)$
+\end_inset
+
+ at point A,B and C
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Results for scenario 2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename IMAGES/scenario 2.png
+	display false
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $H(t)$
+\end_inset
+
+ and 
+\begin_inset Formula $v(t)$
+\end_inset
+
+ at point A,B and C
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Results for scenario 3
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename IMAGES/scenario 3.png
+	display false
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $H(t)$
+\end_inset
+
+ and 
+\begin_inset Formula $v(t)$
+\end_inset
+
+ at point A,B and C
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Conlusion 
+\end_layout
+
+\begin_layout Standard
+We kind of found the result we were expecting as the Head of point B is
+ oscillating arround 1280 and 160 N/m² with a period of 4s.
+ The behaviour we excepted for point B is slightly the one at the beggining
+ of the curve we have calculated but we lost it as it become more like a
+ sinusoidal curve.
+ The second scenario including the friction coefficient 
+\begin_inset Formula $\lambda,$
+\end_inset
+
+is decreasing the global amplitude of 
+\begin_inset Formula $H(t)$
+\end_inset
+
+ and 
+\begin_inset Formula $v(t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Working with the characteristics method makes sense when we calculate scenario
+ 3.
+ We can study the non-trivial behaviour of water in pipes without using
+ our calculation set.
+ As a result, we can see that the velocity gradually decreases as the valve
+ closes at each point.
+ The head at point B and point C follow a similar pattern, oscillating different
+ly than in the first scenario and appearing to adopt a more regular behaviour
+ as time progresses.
+ 
+\end_layout
+
+\end_body
+\end_document
