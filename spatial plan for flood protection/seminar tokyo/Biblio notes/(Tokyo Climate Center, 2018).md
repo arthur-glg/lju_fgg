@@ -1,0 +1,4 @@
+# Primary Factors behind the Heavy Rain Event of July 2018 and the Subsequent Heatwave in Japan from Mid-July Onward
+- the Heavy Rain Event of July 2018 is attributed to an ongoing concentration of two massively moist air streams over western Japan and persistent upward flow associated with the activation of a stationary Baiu front (it's an ouragan of something)
+- The long-term trend of increased intensity in observed extreme precipitation events in Japan and the clear upward trend in amounts of airborne water vapor also suggest that the Heavy Rain Event may be linked to global warming
+- This is associated with a long-term trend of surface air temperature increase due to global warming and a similar increasing trend in the amount of water vapor in the air
