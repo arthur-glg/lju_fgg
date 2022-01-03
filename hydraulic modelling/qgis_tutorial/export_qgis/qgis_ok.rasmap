@@ -62,6 +62,7 @@
       <Layer Name="Culvert Barrels" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="Lateral Structures" />
       <Layer Name="Rating Curve Outlets" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="Lateral Structures" />
       <Layer Name="Outlet Time Series" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="Lateral Structures" />
+      <Layer Name="SA/2D Connections" Type="SA2DStructureLayer" Checked="True" />
       <Layer Name="Gate Groups" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="" />
       <Layer Name="Gate Openings" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="SA/2D Connections" />
       <Layer Name="Culvert Groups" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="" />
@@ -179,16 +180,6 @@
       </Layer>
       <Layer Type="RASGeometry" Filename=".\qgis_ok.p01.hdf">
         <Layer Type="RASXS" UnitsRiverStation="Feet" RiverStationDecimalPlaces="0" />
-        <Layer Type="RASD2FlowArea">
-          <DataColumnGroupVisibilities>
-            <DataColumnGroupVisibility DisplayName="Feature Parameters" IsVisible="False" />
-          </DataColumnGroupVisibilities>
-        </Layer>
-        <Layer Type="MeshPerimeterLayer">
-          <DataColumnGroupVisibilities>
-            <DataColumnGroupVisibility DisplayName="Feature Parameters" IsVisible="True" />
-          </DataColumnGroupVisibilities>
-        </Layer>
         <Layer Name="Culvert Groups" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="" />
         <Layer Name="Culvert Barrels" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="Bridges/Culverts" />
         <Layer Name="Gate Groups" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="" />
@@ -240,6 +231,20 @@
   </Results>
   <MapLayers Checked="True" Expanded="True">
     <Layer Name="station" Type="PointFeatureLayer" Checked="True" Filename=".\station.shp" />
+    <Layer Name="landcoverOK" Type="LandCoverLayer" Checked="True" Filename="..\data_SIG_hydromodell\landuse_D96\landcoverOK.hdf" SelectedParameterForSurfaceFillLabel="ID">
+      <Symbology>
+        <ColorByteMap Type="System.Int32" Alpha="128" Values="1,2,3,4,5,6,7,8,9,10,11,12,13" Colors="-941310,-240281,-14065786,-11655028,-1170823,-12055272,-7074382,-9955811,-5207764,-5178510,-11296810,-10375472,-12441341" ValuesExcludeLegend="0" />
+      </Symbology>
+      <ColorByteMap Type="System.Int32" Alpha="128" Values="1,2,3,4,5,6,7,8,9,10,11,12,13" Colors="-941310,-240281,-14065786,-11655028,-1170823,-12055272,-7074382,-9955811,-5207764,-5178510,-11296810,-10375472,-12441341" ValuesExcludeLegend="0" />
+      <Layer Name="Classification Polygons" Type="LandCoverClassificationLayer" Filename="..\data_SIG_hydromodell\landuse_D96\landcoverOK.hdf" />
+    </Layer>
+    <Layer Name="landcoverHECRAS" Type="LandCoverLayer" Filename="..\data_SIG_hydromodell\landuse_D96\landcoverHECRAS.hdf" SelectedParameterForSurfaceFillLabel="ID">
+      <Symbology>
+        <ColorByteMap Type="System.Int32" Alpha="128" Values="" Colors="" ValuesExcludeLegend="" />
+      </Symbology>
+      <ColorByteMap Type="System.Int32" Alpha="128" Values="" Colors="" ValuesExcludeLegend="" />
+      <Layer Name="Classification Polygons" Type="LandCoverClassificationLayer" Filename="..\data_SIG_hydromodell\landuse_D96\landcoverHECRAS.hdf" />
+    </Layer>
   </MapLayers>
   <Terrains Checked="True" Expanded="True">
     <Layer Name="terrain" Type="TerrainLayer" Checked="True" Filename=".\terrain\terrain.hdf">
@@ -251,10 +256,10 @@
     </Layer>
   </Terrains>
   <CurrentView>
-    <MaxX>578083.306578599</MaxX>
-    <MinX>575151.192823475</MinX>
-    <MaxY>172838.007736594</MaxY>
-    <MinY>170141.34602705</MinY>
+    <MaxX>577697.018066318</MaxX>
+    <MinX>574764.904311194</MinX>
+    <MaxY>172348.708954371</MaxY>
+    <MinY>169652.047244827</MinY>
   </CurrentView>
   <VelocitySettings>
     <Density>1.5</Density>
@@ -285,6 +290,7 @@
     <Folders>
       <TerrainDestinationFolder>.\terrain</TerrainDestinationFolder>
       <TerrainSourceFolder>..\arcmap_process\ZLAS\grd\dtm</TerrainSourceFolder>
+      <LandCoverDestinationFolder>..\data_SIG_hydromodell\landuse_D96</LandCoverDestinationFolder>
     </Folders>
   </CurrentSettings>
 </RASMapper>
