@@ -1,0 +1,406 @@
+
+
+ <DUALSPHYSICS5> Copyright (c) 2020 by
+ Dr Jose M. Dominguez Alonso, Dr Alejandro Crespo,
+ Prof. Moncho Gomez Gesteira, Prof. Benedict Rogers,
+ Dr Georgios Fourtakas, Prof. Peter Stansby,
+ Dr Renato Vacondio, Dr Corrado Altomare, Dr Angelo Tafuni,
+ Dr Orlando Garcia Feal, Ivan Martinez Estevez
+
+ EPHYSLAB Environmental Physics Laboratory, Universidade de Vigo
+ School of Mechanical, Aerospace and Civil Engineering, University of Manchester
+
+ DualSPHysics is free software: you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public License
+ as published by the Free Software Foundation, either version 2.1 of
+ the License, or (at your option) any later version.
+
+ DualSPHysics is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with DualSPHysics. If not, see <http://www.gnu.org/licenses/>.
+
+
+DualSPHysics5 v5.0.193 (23-07-2021)
+====================================
+[Select CUDA Device]
+[CUDA Capable device(s)]
+  Detected 1 CUDA Capable device(s)
+  CUDA Driver Version / Runtime Version: 11.4 / 9.2
+ 
+Device 0: "NVIDIA GeForce GTX 1050 Ti with Max-Q Design"
+  CUDA Capability Major....: 6.1
+  Global memory............: 4096 MBytes
+  CUDA Cores...............: 768 ( 6 Multiprocessors, 128 CUDA Cores/MP)
+  GPU Max Clock rate.......: 1418 MHz (1.42 GHz)
+  Memory Clock rate........: 3504 Mhz
+  Memory Bus Width.........: 128-bit
+  L2 Cache Size............: 1024 KBytes
+  Constant memory..........: 64 KBytes
+  Shared memory per block..: 48 KBytes
+  Registers per block......: 65536
+  Maximum threads per MP...: 2048
+  Maximum threads per block: 1024
+  Concurrent copy and kernel execution....: Yes with 1 copy engine(s)
+  Run time limit on kernels...............: Yes
+  Integrated GPU sharing Host Memory......: No
+  Support host page-locked memory mapping.: Yes
+  Device has ECC support..................: Disabled
+  CUDA Device Driver Mode (TCC or WDDM)...: WDDM (Windows Display Driver Model)
+  Device supports Unified Addressing (UVA): Yes
+  Device PCI (Domain / Bus / location)....: 0 / 2 / 0
+  Device supports P2P and RDMA............: No
+ 
+[GPU Hardware]
+Device default: 0  "NVIDIA GeForce GTX 1050 Ti with Max-Q Design"
+Compute capability: 6.1
+Memory global: 4096 MB
+Memory shared: 49152 Bytes
+[Initialising JSphGpuSingle  08-01-2022 12:05:34]
+ProgramFile=".../bin/windows/DualSPHysics5.0_win64.exe"
+ExecutionDir=".../examples/main/01_DamBreak"
+XmlFile=".../01_DamBreak/CaseDambreak_out/CaseDambreak.xml"
+OutputDir=".../main/01_DamBreak/CaseDambreak_out"
+OutputDataDir=".../01_DamBreak/CaseDambreak_out/data"
+XML-App: GenCase v5.0.238 (22-07-2021)
+XML-Vars (uservars + ctes): CaseName=["CaseDambreak"]  Data2D=[0]  Data2DPosy=[0]  H=[0.0147224]  KernelSize=[0.0294449]  B=[162005]  Gamma=[7]  Rhop0=[1000]  Dp=[0.0085]  Gravity_x=[0]  Gravity_y=[0]  Gravity_z=[-9.81]  MassFluid=[0.000614125]  MassBound=[0.000614125]
+XML-Vars (parameters): TimeMax=[1.6]  TimeOut=[0.01]
+**Basic case configuration is loaded
+**Special case configuration is loaded
+Loading initial state of particles...
+Loaded particles: 171496
+MapRealPos(border)=(0.000263878,0.000263878,0.000263878)-(1.59974,0.673236,0.452236)
+MapRealPos(final)=(0.000263878,0.000263878,0.000263878)-(1.59974,0.673236,0.678222)
+**Initial state of particles is loaded
+**3D-Simulation parameters:
+CaseName="CaseDambreak"
+RunName="CaseDambreak"
+Symmetry=False
+SavePosDouble=False
+SaveFtAce=False
+SvTimers=True
+Boundary="DBC"
+StepAlgorithm="Verlet"
+  VerletSteps=40
+Kernel="CubicSpline"
+  Cubic.a1=0.3183099
+  Cubic.aa=6775353
+  Cubic.a24=24937.42
+  Cubic.c1=-2.032606e+07
+  Cubic.c2=-5081515
+  Cubic.d1=1.524454e+07
+  Cubic.od_wdeltap=1.804517e-05
+Viscosity="Artificial"
+  Visco=0.1
+  ViscoBoundFactor=1
+DensityDiffusion="Fourtakas et al 2019 (inner)"
+  DensityDiffusionValue=0.1
+Shifting="None"
+RigidAlgorithm="None"
+FloatingCount=0
+CaseNp=171496
+CaseNbound=43186
+CaseNfixed=43186
+CaseNmoving=0
+CaseNfloat=0
+CaseNfluid=128310
+PeriodicActive="None"
+Dp=0.008500000000000001
+KernelH=0.014722  (CoefficientH=1; H/Dp=1.73205)
+KernelSize=0.02944486
+CteB=162005.1
+Gamma=7
+RhopZero=1000
+Cs0=33.6754507672132
+CFLnumber=0.2
+DtIni=0.0004371858928228424
+DtMin=2.185929496687099e-05
+DtAllParticles=False
+MassFluid=0.000614125
+MassBound=0.000614125
+TimeMax=1.6
+TimePart=0.01
+Gravity=(0,0,-9.81)
+NpMinimum=43186
+RhopOut=True
+RhopOutMin=700
+RhopOutMax=1300
+WrnPartsOut=True
+**Requested GPU memory for 171624 particles: 23.6 MB (0 times).
+CellMode="Full"
+ScellDiv=1
+MapCells=(55,23,24)
+CellDomFixed=False
+DomCells=(55,23,24)
+DomCellCode="13_10_10"
+PosCellCode="13_10_9 (8192,1024,512)"
+PosCellSize=0.029445  (1 x KernelSize)
+ 
+BlockSize calculation mode: Fixed.
+  BsForcesBound=128 (48 regs)
+  BsForcesFluid=128 (56 regs)
+ 
+**CellDiv: Requested gpu memory for 180198 particles: 1.4 MB.
+**CellDiv: Requested gpu memory for 4992 cells (CellMode=Full): 0.1 MB.
+ 
+RunMode="Pos-Cell - Single-Gpu"
+ 
+Particle summary:
+  Fixed....: 43186  id:(0-43185)   MKs:3 (10-11,20)
+  Moving...: 0
+  Floating.: 0
+  Fluid....: 128310  id:(43186-171495)   MKs:1 (1)
+
+Total particles: 171496 (bound=43186 (fx=43186 mv=0 ft=0) fluid=128310)
+Total MK blocks: 4 (bound=3 (fx=3 mv=0 ft=0) fluid=1)
+ 
+
+*** WARNING: The kernel Cubic Spline is not available in GaugeSystem, so kernel Wendland is used.
+
+Allocated memory in CPU: 15492240 (14.77 MB)
+Allocated memory in GPU: 26253344 (25.04 MB)
+Part_0000        171496 particles successfully stored
+
+[WARNINGS]
+1. The kernel Cubic Spline is not available in GaugeSystem, so kernel Wendland is used.
+
+[Initialising simulation (ua4tq3rl)  08-01-2022 12:05:34]
+PART       PartTime      TotalSteps    Steps    Time/Sec   Finish time        
+=========  ============  ============  =======  =========  ===================
+Part_0001      0.010086           116      116     164.67  08-01-2022 12:09:57
+Part_0002      0.020045           231      115     158.80  08-01-2022 12:09:52
+Part_0003      0.030051           347      116     159.72  08-01-2022 12:09:51
+Part_0004      0.040062           463      116     161.03  08-01-2022 12:09:52
+Part_0005      0.050050           579      116     162.53  08-01-2022 12:09:52
+Part_0006      0.060079           696      117     165.48  08-01-2022 12:09:53
+Part_0007      0.070082           813      117     165.73  08-01-2022 12:09:54
+Part_0008      0.080050           930      117     165.72  08-01-2022 12:09:54
+Part_0009      0.090017          1047      117     166.37  08-01-2022 12:09:55
+Part_0010      0.100012          1167      120     169.93  08-01-2022 12:09:57
+Part_0011      0.110072          1289      122     172.30  08-01-2022 12:09:57
+Part_0012      0.120041          1408      119     169.23  08-01-2022 12:09:58
+**CellDiv: Requested gpu memory for 6048 cells (CellMode=Full): 0.1 MB.
+Part_0013      0.130008          1529      121     171.14  08-01-2022 12:09:59
+Part_0014      0.140083          1651      122     170.33  08-01-2022 12:09:59
+Part_0015      0.150050          1771      120     168.38  08-01-2022 12:09:59
+Part_0016      0.160033          1891      120     168.52  08-01-2022 12:10:00
+Part_0017      0.170073          2012      121     168.81  08-01-2022 12:10:00
+**CellDiv: Requested gpu memory for 7200 cells (CellMode=Full): 0.1 MB.
+Part_0018      0.180026          2132      120     170.00  08-01-2022 12:10:00
+Part_0019      0.190051          2254      122     171.19  08-01-2022 12:10:01
+Part_0020      0.200050          2374      120     168.42  08-01-2022 12:10:01
+Part_0021      0.210003          2497      123     172.23  08-01-2022 12:10:01
+Part_0022      0.220038          2622      125     173.58  08-01-2022 12:10:02
+Part_0023      0.230068          2743      121     168.23  08-01-2022 12:10:02
+Part_0024      0.240049          2863      120     167.81  08-01-2022 12:10:01
+**CellDiv: Requested gpu memory for 8640 cells (CellMode=Full): 0.1 MB.
+Part_0025      0.250017          2982      119     165.37  08-01-2022 12:10:02
+Part_0026      0.260082          3102      120     164.82  08-01-2022 12:10:02
+Part_0027      0.270030          3222      120     166.75  08-01-2022 12:10:01
+Part_0028      0.280052          3344      122     168.43  08-01-2022 12:10:01
+Part_0029      0.290033          3488      144     199.30  08-01-2022 12:10:03
+Part_0030      0.300011          3637      149     206.42  08-01-2022 12:10:05
+Part_0031      0.310026          3808      171     235.73  08-01-2022 12:10:08
+Part_0032      0.320045          3970      162     223.50  08-01-2022 12:10:12
+Part_0033      0.330016          4107      137     188.74  08-01-2022 12:10:12
+Part_0034      0.340059          4238      131     179.61  08-01-2022 12:10:12
+**CellDiv: Requested gpu memory for 10296 cells (CellMode=Full): 0.2 MB.
+Part_0035      0.350022          4368      130     179.74  08-01-2022 12:10:12
+Part_0036      0.360020          4497      129     178.30  08-01-2022 12:10:13
+Part_0037      0.370057          4624      127     174.05  08-01-2022 12:10:13
+Part_0038      0.380025          4754      130     178.84  08-01-2022 12:10:13
+Part_0039      0.390067          4880      126     171.96  08-01-2022 12:10:13
+Part_0040      0.400051          5004      124     169.44  08-01-2022 12:10:13
+Part_0041      0.410077          5130      126     170.47  08-01-2022 12:10:13
+Part_0042      0.420008          5253      123     167.32  08-01-2022 12:10:12
+Part_0043      0.430011          5377      124     167.37  08-01-2022 12:10:12
+Part_0044      0.440023          5501      124     166.14  08-01-2022 12:10:12
+**CellDiv: Requested gpu memory for 12936 cells (CellMode=Full): 0.2 MB.
+Part_0045      0.450078          5624      123     164.24  08-01-2022 12:10:11
+Part_0046      0.460055          5747      123     165.03  08-01-2022 12:10:11
+Part_0047      0.470079          5872      125     167.18  08-01-2022 12:10:11
+Part_0048      0.480019          5994      122     164.84  08-01-2022 12:10:10
+Part_0049      0.490026          6117      123     163.83  08-01-2022 12:10:10
+Part_0050      0.500051          6240      123     163.94  08-01-2022 12:10:10
+Part_0051      0.510031          6361      121     161.20  08-01-2022 12:10:09
+Part_0052      0.520034          6483      122     161.84  08-01-2022 12:10:09
+Part_0053      0.530035          6604      121     160.10  08-01-2022 12:10:09
+Part_0054      0.540025          6764      160     211.12  08-01-2022 12:10:10
+Part_0055      0.550021          6946      182     239.42  08-01-2022 12:10:12
+Part_0056      0.560039          7133      187     245.72  08-01-2022 12:10:14
+Part_0057      0.570038          7307      174     228.51  08-01-2022 12:10:16
+Part_0058      0.580021          7468      161     212.94  08-01-2022 12:10:17
+Part_0059      0.590068          7609      141     185.73  08-01-2022 12:10:17
+Part_0060      0.600039          7739      130     171.18  08-01-2022 12:10:16
+Part_0061      0.610024          7869      130     170.84  08-01-2022 12:10:16
+Part_0062      0.620030          8000      131     171.36  08-01-2022 12:10:17
+Part_0063      0.630065          8132      132     171.80  08-01-2022 12:10:16
+Part_0064      0.640038          8260      128     167.39  08-01-2022 12:10:16
+Part_0065      0.650028          8389      129     168.44  08-01-2022 12:10:16
+Part_0066      0.660064          8517      128     166.13  08-01-2022 12:10:15
+**CellDiv: Requested gpu memory for 16128 cells (CellMode=Full): 0.2 MB.
+Part_0067      0.670028          8645      128     166.58  08-01-2022 12:10:15
+Part_0068      0.680068          8772      127     164.19  08-01-2022 12:10:15
+Part_0069      0.690082          8897      125     161.81  08-01-2022 12:10:14
+Part_0070      0.700071          9021      124     160.53  08-01-2022 12:10:14
+Part_0071      0.710008          9145      124     160.87  08-01-2022 12:10:14
+**CellDiv: Requested gpu memory for 18816 cells (CellMode=Full): 0.3 MB.
+Part_0072      0.720074          9270      125     160.16  08-01-2022 12:10:13
+Part_0073      0.730060          9393      123     158.34  08-01-2022 12:10:14
+Part_0074      0.740071          9518      125     160.40  08-01-2022 12:10:13
+Part_0075      0.750075          9642      124     158.84  08-01-2022 12:10:13
+Part_0076      0.760053          9765      123     157.83  08-01-2022 12:10:13
+Part_0077      0.770011          9891      126     163.25  08-01-2022 12:10:12
+Part_0078      0.780016         10014      123     159.24  08-01-2022 12:10:12
+Part_0079      0.790026         10136      122     157.43  08-01-2022 12:10:11
+Part_0080      0.800020         10257      121     156.21  08-01-2022 12:10:11
+Part_0081      0.810042         10380      123     158.21  08-01-2022 12:10:11
+Part_0082      0.820073         10502      122     157.07  08-01-2022 12:10:10
+Part_0083      0.830037         10624      122     158.85  08-01-2022 12:10:11
+Part_0084      0.840042         10747      123     159.14  08-01-2022 12:10:10
+Part_0085      0.850034         10868      121     157.82  08-01-2022 12:10:10
+Part_0086      0.860073         10989      121     158.52  08-01-2022 12:10:09
+Part_0087      0.870002         11109      120     158.10  08-01-2022 12:10:09
+Part_0088      0.880076         11231      122     158.56  08-01-2022 12:10:09
+Part_0089      0.890053         11352      121     160.47  08-01-2022 12:10:09
+Part_0090      0.900064         11473      121     162.69  08-01-2022 12:10:09
+Part_0091      0.910076         11594      121     160.75  08-01-2022 12:10:08
+Part_0092      0.920048         11714      120     174.07  08-01-2022 12:10:08
+Part_0093      0.930076         11835      121     165.03  08-01-2022 12:10:08
+Part_0094      0.940014         11955      120     161.46  08-01-2022 12:10:08
+Part_0095      0.950011         12075      120     161.74  08-01-2022 12:10:08
+Part_0096      0.960006         12195      120     160.82  08-01-2022 12:10:08
+Part_0097      0.970077         12316      121     160.81  08-01-2022 12:10:07
+Part_0098      0.980023         12436      120     161.18  08-01-2022 12:10:08
+Part_0099      0.990015         12556      120     160.53  08-01-2022 12:10:07
+Part_0100      1.000022         12677      121     162.06  08-01-2022 12:10:07
+Part_0101      1.010044         12798      121     162.21  08-01-2022 12:10:07
+Part_0102      1.020080         12919      121     161.62  08-01-2022 12:10:07
+Part_0103      1.030048         13040      121     162.39  08-01-2022 12:10:07
+Part_0104      1.040049         13163      123     165.42  08-01-2022 12:10:07
+Part_0105      1.050014         13286      123     169.26  08-01-2022 12:10:06
+Part_0106      1.060015         13408      122     163.62  08-01-2022 12:10:07
+Part_0107      1.070013         13529      121     161.79  08-01-2022 12:10:07
+Part_0108      1.080029         13650      121     160.65  08-01-2022 12:10:06
+Part_0109      1.090039         13770      120     159.71  08-01-2022 12:10:06
+Part_0110      1.100020         13889      119     158.92  08-01-2022 12:10:06
+Part_0111      1.110014         14008      119     159.10  08-01-2022 12:10:06
+Part_0112      1.120001         14127      119     158.49  08-01-2022 12:10:06
+Part_0113      1.130013         14246      119     157.86  08-01-2022 12:10:05
+Part_0114      1.140018         14365      119     158.08  08-01-2022 12:10:06
+Part_0115      1.150063         14488      123     162.64  08-01-2022 12:10:05
+Part_0116      1.160001         14613      125     166.51  08-01-2022 12:10:05
+Part_0117      1.170002         14734      121     160.08  08-01-2022 12:10:05
+Part_0118      1.180032         14858      124     163.57  08-01-2022 12:10:05
+Part_0119      1.190066         14981      123     161.90  08-01-2022 12:10:05
+Part_0120      1.200021         15104      123     164.11  08-01-2022 12:10:05
+Part_0121      1.210032         15227      123     163.37  08-01-2022 12:10:05
+Part_0122      1.220070         15351      124     163.71  08-01-2022 12:10:05
+Part_0123      1.230050         15472      121     160.66  08-01-2022 12:10:04
+Part_0124      1.240039         15592      120     159.45  08-01-2022 12:10:04
+Part_0125      1.250046         15714      122     161.20  08-01-2022 12:10:05
+Part_0126      1.260071         15835      121     160.65  08-01-2022 12:10:04
+Part_0127      1.270038         15956      121     160.43  08-01-2022 12:10:04
+Part_0128      1.280037         16076      120     159.13  08-01-2022 12:10:04
+Part_0129      1.290008         16196      120     159.97  08-01-2022 12:10:04
+Part_0130      1.300021         16315      119     157.70  08-01-2022 12:10:04
+Part_0131      1.310033         16435      120     159.32  08-01-2022 12:10:03
+Part_0132      1.320014         16555      120     160.73  08-01-2022 12:10:04
+Part_0133      1.330017         16674      119     159.02  08-01-2022 12:10:03
+Part_0134      1.340041         16793      119     157.47  08-01-2022 12:10:03
+Part_0135      1.350011         16911      118     157.49  08-01-2022 12:10:04
+Part_0136      1.360019         17030      119     159.78  08-01-2022 12:10:03
+Part_0137      1.370075         17149      119     158.96  08-01-2022 12:10:03
+Part_0138      1.380050         17267      118     158.83  08-01-2022 12:10:02
+Part_0139      1.390027         17385      118     157.90  08-01-2022 12:10:03
+Part_0140      1.400027         17503      118     157.29  08-01-2022 12:10:02
+Part_0141      1.410041         17621      118     323.10  08-01-2022 12:10:05
+Part_0142      1.420060         17739      118     158.11  08-01-2022 12:10:04
+Part_0143      1.430065         17857      118     158.28  08-01-2022 12:10:04
+Part_0144      1.440016         17974      117     157.83  08-01-2022 12:10:04
+Part_0145      1.450030         18092      118     157.77  08-01-2022 12:10:04
+Part_0146      1.460061         18210      118     410.72  08-01-2022 12:10:06
+Part_0147      1.470006         18327      117     158.25  08-01-2022 12:10:07
+Part_0148      1.480073         18446      119     158.24  08-01-2022 12:10:06
+Part_0149      1.490044         18563      117     156.73  08-01-2022 12:10:06
+Part_0150      1.500033         18680      117     157.41  08-01-2022 12:10:06
+Part_0151      1.510083         18798      118     283.72  08-01-2022 12:10:07
+Part_0152      1.520074         18915      117     155.33  08-01-2022 12:10:07
+Part_0153      1.530011         19032      117     157.73  08-01-2022 12:10:06
+Part_0154      1.540008         19149      117     279.23  08-01-2022 12:10:08
+Part_0155      1.550027         19267      118     155.95  08-01-2022 12:10:08
+Part_0156      1.560025         19385      118     156.25  08-01-2022 12:10:07
+Part_0157      1.570022         19503      118     156.32  08-01-2022 12:10:08
+Part_0158      1.580017         19620      117     155.44  08-01-2022 12:10:07
+Part_0159      1.590026         19737      117     154.23  08-01-2022 12:10:07
+Part_0160      1.600025         19854      117     154.53  08-01-2022 12:10:08
+
+[Simulation finished  08-01-2022 12:10:08]
+Particles of simulation (initial): 171496
+DTs adjusted to DtMin............: 0
+Excluded particles...............: 0
+Total Runtime....................: 273.402008 sec.
+Simulation Runtime...............: 273.309021 sec.
+Runtime per physical second......: 170.815414 sec.
+Steps per second.................: 72.643044
+Steps of simulation..............: 19854
+PART files.......................: 161
+Maximum number of particles......: 171496
+Maximum number of cells..........: 17710
+CPU Memory.......................: 15492240 (14.77 MB)
+GPU Memory.......................: 26474528 (25.25 MB)
+ 
+[GPU Timers]
+VA-Init..........................: 0.092985 sec.
+NL-Limits........................: 2.613017 sec.
+NL-PreSort.......................: 1.084550 sec.
+NL-RadixSort.....................: 22.429190 sec.
+NL-CellBegin.....................: 2.647949 sec.
+NL-SortData......................: 9.031049 sec.
+NL-OutCheck......................: 0.208086 sec.
+CF-PreForces.....................: 4.162159 sec.
+CF-Forces........................: 219.145889 sec.
+SU-Shifting......................: 0.000000 sec.
+SU-ComputeStep...................: 6.644817 sec.
+SU-Floating......................: 0.000000 sec.
+SU-Motion........................: 0.000000 sec.
+SU-Periodic......................: 0.000000 sec.
+SU-ResizeNp......................: 0.000000 sec.
+SU-DownData......................: 0.579703 sec.
+SU-SavePart......................: 1.737856 sec.
+SU-Chrono........................: 0.000000 sec.
+SU-BoundCorr.....................: 0.000000 sec.
+SU-InOut.........................: 0.000000 sec.
+ 
+[Output files]
+- CfgInit_Domain.vtk...: Saves the limits of the case and the simulation domain limits.
+- CfgInit_MapCells.vtk.: Saves the cell division of the simulation domain.
+- Run.csv..............: One line CSV file with execution parameters and other simulation data.
+- Run.out..............: Log file of the simulation.
+- data/PartInfo.ibi4...: Binary file with execution information for each instant (input for PartInfo program).
+- data/PartOut_???.obi4: Binary file with particles excluded during simulation (input for PartVtkOut program).
+- data/Part_????.bi4...: Binary file with particle data in different instants.
+- data/Part_Head.ibi4..: Binary file with basic information of simulation data.
+ 
+[WARNINGS]
+1. The kernel Cubic Spline is not available in GaugeSystem, so kernel Wendland is used.
+ 
+[References]
+- Official solver reference DualSPHysics v5.0: J.M. Dominguez, G. Fourtakas,
+    C. Altomare, R.B. Canelas, A. Tafuni, O. Garcia-Feal, I. Martinez-Estevez,
+    A. Mokos, R. Vacondio, A.J.C. Crespo, B.D. Rogers, P.K. Stansby, M. Gomez-Gesteira.
+    2021. DualSPHysics: from fluid dynamics to multiphysics problems.
+    Computational Particle Mechanics. doi: https://doi.org/10.1007/s40571-021-00404-2
+
+- Optimised CPU multi-core and GPU implementation (Dominguez et al., 2013  https://doi.org/10.1016/j.cpc.2012.10.015)
+- Dynamic boundary conditions (Crespo et al., 2007  https://doi.org/10.3970/cmc.2007.005.173)
+- Density diffusion Term: Fourtakas (Fourtakas et al., 2019  https://doi.org/10.1016/j.compfluid.2019.06.009)
+- Viscosity: Artificial (Monaghan, 1992  https://doi.org/10.1146/annurev.aa.30.090192.002551)
+- Kernel: Cubic Spline (Monaghan, 1992  https://doi.org/10.1146/annurev.aa.30.090192.002551)
+- Time integration scheme: Verlet (Verlet, 1967  https://doi.org/10.1103/PhysRev.159.98)
+
+Finished execution (code=0).
+
