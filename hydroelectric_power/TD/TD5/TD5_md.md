@@ -61,3 +61,39 @@ $$
 
 ![](D:\lju_fgg\lju_fgg\hydroelectric_power\TD\TD5\figure\varia_graph.png)
 
+## Financial construction of the project based on variable cost 
+
+We consider that the concession for hydropower production is granted for 50 years. As before preparation works and construction will last for 7 years. 
+
+### Static indicators 
+
+We can estimate :
+
+- the average yearly production, 
+- the rated power of the powerhouse: 45 MW,
+- the investment cost, 
+- the production consist of :
+  - anormalization cost :
+    - construction works : 2% over 30 years, 
+    - equipment : 5% over 20 years, 
+    - start-up : 15% over 7 years,
+  - annual operation cost (the operation is only for half of the year):
+    - maintenance : 0,5%
+    - insurance : 0,2 %
+    - workload : 1%
+
+<img src="D:\lju_fgg\lju_fgg\hydroelectric_power\TD\TD5\figure\dyna_tab.png" style="zoom:50%;" />
+
+![](D:\lju_fgg\lju_fgg\hydroelectric_power\TD\TD5\figure\dyna_courbe.png)
+
+### Dynamic indicators 
+
+- we consider the price of energy sold on the market 
+- the discount rate 
+- we estimated financial construction plan, then the NPV (Net present value)
+- we estimated the internal rate of return
+
+For a good economic plan: 
+
+- $NPV > 0$
+- $IRR> DiscountRate $ or at least $IRR>0$
