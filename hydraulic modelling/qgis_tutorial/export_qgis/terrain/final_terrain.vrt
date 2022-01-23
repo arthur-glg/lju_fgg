@@ -1,0 +1,48 @@
+<VRTDataset rasterXSize="3000" rasterYSize="2914">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["Slovenija_D96_TM",GEOGCS["ETRS89",DATUM["European_Terrestrial_Reference_System_1989",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6258"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",15],PARAMETER["scale_factor",0.9999],PARAMETER["false_easting",500000],PARAMETER["false_northing",-5000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]]</SRS>
+  <GeoTransform>  5.7499993000000005e+05,  1.0000000000000000e+00,  0.0000000000000000e+00,  1.7291398999999999e+05,  0.0000000000000000e+00, -1.0000000000000000e+00</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1">
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">298.34375</MDI>
+      <MDI key="STATISTICS_MEAN">214.86863356461</MDI>
+      <MDI key="STATISTICS_MINIMUM">166.6484375</MDI>
+      <MDI key="STATISTICS_STDDEV">18.335614773531</MDI>
+    </Metadata>
+    <NoDataValue>-9999</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <Histograms>
+      <HistItem>
+        <HistMin>166.6484375</HistMin>
+        <HistMax>298.34375</HistMax>
+        <BucketCount>256</BucketCount>
+        <IncludeOutOfRange>1</IncludeOutOfRange>
+        <Approximate>0</Approximate>
+        <HistCounts>4|4|0|0|0|0|0|0|0|0|0|1|0|1|1|1|0|1|0|0|0|1|0|1|2|1|0|1|0|3|0|1|0|0|2|1|0|4|2|0|2|3|7|5|5|3|5|4|7|6|8|7|6|9|7|5|10|7|11|10|10|1609|4755|12522|12023|51399|76151|59939|76025|152896|314257|485291|662792|425420|383430|425506|387648|507950|376919|229263|182791|139642|90530|44647|35005|27787|24557|21419|25046|31268|26767|28635|43200|60464|59735|54431|85728|83365|53343|35101|48680|32269|30774|25222|23945|25759|35606|29111|26899|22805|26576|30495|35921|27789|26851|23075|23352|21950|20213|22473|19536|23902|21677|18251|17644|19035|20666|17323|16988|22973|22672|16103|15452|15592|14760|14589|15917|13646|14031|14884|16256|15890|16220|14824|14082|13870|13170|13034|11758|12028|13100|12692|13114|13842|13617|12426|12483|13611|12708|12367|11912|11851|12084|11829|11221|11265|11485|11287|11242|12452|11725|11691|11100|11759|12608|11664|10850|10490|10263|10346|9796|9577|9939|9684|9388|9467|9731|9118|10071|9261|9654|9362|9152|11370|10654|8458|8284|8838|7486|7576|7696|8101|6994|6615|6624|6395|6274|6181|5940|6232|5959|5740|5586|5507|6770|5266|5515|5392|5489|5442|5057|4855|4980|4432|4399|3997|3782|3722|3640|3645|3679|3156|2840|2782|2611|2604|2856|3119|2177|1591|1473|1226|1209|1051|808|780|755|667|606|634|641|391|270|280|348|243</HistCounts>
+      </HistItem>
+    </Histograms>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">final_terrain.raster_build.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="3000" RasterYSize="2914" DataType="Float32" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="3000" ySize="2914" />
+      <DstRect xOff="0" yOff="0" xSize="3000" ySize="2914" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">final_terrain.river.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="2142" RasterYSize="2169" DataType="Float32" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="2142" ySize="2169" />
+      <DstRect xOff="112.55922061298" yOff="682.814883255982" xSize="2142" ySize="2169" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">final_terrain.dtm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="3000" RasterYSize="2914" DataType="Float32" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="3000" ySize="2914" />
+      <DstRect xOff="0" yOff="0" xSize="3000" ySize="2914" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>

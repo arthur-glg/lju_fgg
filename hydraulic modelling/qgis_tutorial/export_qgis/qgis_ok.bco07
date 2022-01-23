@@ -1,0 +1,78 @@
+ 
+                                              HEC-RAS - River Analysis System
+ 
+ 
+Project File:  d:\lju_fgg\lju_fgg\hydraulic modelling\qgis_tutorial\export_qgis\qgis_ok.prj
+ 
+Project Name:  qgis_ok
+ 
+ 
+Plan Name:     q10
+ 
+Short ID:      q10
+ 
+
+Starting Time:   03Jul2013 0400
+
+Ending Time:     05Jul2013 0800
+
+
+                ################################################
+                #                                              #
+                #                                              #
+                #       1D and 2D Unsteady Flow Module         #
+                #                                              #
+                #                                              #
+                #          HEC-RAS 6.1 September               #
+                #                                              #
+                #             21JAN22 at 09:32:22              #
+                #                                              #
+                ################################################
+                
+ 
+ 
+ 
+
+
+
+                 ***   Volume Accounting for 1D Flow Area in 1000 m^3   ***
+
+         US Inflow      DS Outflow       Lat Hydro        SA Hydro     Groundwater      Diversions   Precip Excess
+         *********      **********       *********        ********     ***********      **********   *************
+           144128.         143569.                                                                                                
+
+    Start 1D Reach  Final 1D Reach   Starting SA's      Final SA's
+    **************  **************   *************      **********
+             450.2           962.4                                
+
+ 
+
+
+
+                 ***   Volume Accounting for 2D Flow Areas in 1000 m^3   ***
+
+           2D Area    Starting Vol      Ending Vol      Cum Inflow     Cum Outflow           Error   Percent Error
+           *******    ************      **********      **********     ***********           *****   *************
+ 
+ 
+       l-flow_area                           26.88           26.77        0.001686          0.1120          0.4184
+       r-flow_area                           1.613           1820.           1819.          0.3027         0.01663
+ 
+
+
+
+                 ***  Total Volume Accounting (for the entire model) in 1000 m^3   ***
+
+Total Boundary Flux of Water In          144128.
+Total Boundary Flux of Water Out         143569.
+
+Starting Volume                            450.2
+Ending Volume                              990.9
+
+
+                             Error   Percent Error
+                             *****   *************
+                        -18.658976         0.01291
+
+
+
