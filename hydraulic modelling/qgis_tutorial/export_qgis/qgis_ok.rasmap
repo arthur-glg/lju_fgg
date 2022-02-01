@@ -334,6 +334,8 @@
     <Layer Name="unsteady_flow" Type="RASEventConditions" Filename=".\qgis_ok.u01.hdf" />
     <Layer Name="q10" Type="RASEventConditions" Filename=".\qgis_ok.u02.hdf" />
     <Layer Name="q100" Type="RASEventConditions" Filename=".\qgis_ok.u03.hdf" />
+    <Layer Name="q500" Type="RASEventConditions" Filename=".\qgis_ok.u04.hdf" />
+    <Layer Name="q500_OK" Type="RASEventConditions" Filename=".\qgis_ok.u05.hdf" />
   </EventConditions>
   <Results Checked="True" Expanded="True">
     <Layer Name="plan1" Type="RASResults" Filename=".\qgis_ok.p01.hdf">
@@ -521,16 +523,7 @@
       <Layer Type="RASGeometry" Checked="True" Filename=".\qgis_ok.p07.hdf">
         <Layer Type="RASRiver" Checked="True" />
         <Layer Type="RASXS" Checked="True" UnitsRiverStation="Feet" RiverStationDecimalPlaces="0" />
-        <Layer Type="RASD2FlowArea" Checked="True">
-          <DataColumnGroupVisibilities>
-            <DataColumnGroupVisibility DisplayName="Feature Parameters" IsVisible="False" />
-          </DataColumnGroupVisibilities>
-        </Layer>
-        <Layer Type="MeshPerimeterLayer">
-          <DataColumnGroupVisibilities>
-            <DataColumnGroupVisibility DisplayName="Feature Parameters" IsVisible="True" />
-          </DataColumnGroupVisibilities>
-        </Layer>
+        <Layer Type="RASD2FlowArea" Checked="True" />
         <Layer Name="Culvert Groups" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="" />
         <Layer Name="Culvert Barrels" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="Bridges/Culverts" />
         <Layer Name="Gate Groups" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="" />
@@ -640,11 +633,79 @@
           <Surface On="True" />
         </Layer>
       </Layer>
-      <Layer Name="Depth" Type="RASResultsMap" Checked="True">
-        <MapParameters MapType="depth" ProfileIndex="156" ProfileName="05JUL2013 08:00:00" />
+      <Layer Name="Depth" Type="RASResultsMap">
+        <MapParameters MapType="depth" ProfileIndex="2147483647" ProfileName="Max" />
       </Layer>
       <Layer Name="Velocity" Type="RASResultsMap">
         <MapParameters MapType="velocity" ProfileIndex="43" ProfileName="03JUL2013 18:20:00" />
+      </Layer>
+      <Layer Name="WSE" Type="RASResultsMap">
+        <MapParameters MapType="elevation" ProfileIndex="2147483647" ProfileName="Max" />
+      </Layer>
+    </Layer>
+    <Layer Name="Plan 09" Type="RASResults" Checked="True" Expanded="True" Filename=".\qgis_ok.p09.hdf">
+      <Layer Name="Event Conditions" Type="RASEventConditions" Filename=".\qgis_ok.p09.hdf">
+        <Layer Name="Wind Layer" Type="ResultWindLayer" Filename=".\qgis_ok.p09.hdf">
+          <ResampleMethod>near</ResampleMethod>
+          <Surface On="True" />
+          <Metadata BandIndex="0" SubDataset="" />
+        </Layer>
+      </Layer>
+      <Layer Type="RASGeometry" Filename=".\qgis_ok.p09.hdf">
+        <Layer Type="RASXS" UnitsRiverStation="Feet" RiverStationDecimalPlaces="0" />
+        <Layer Type="RASD2FlowArea">
+          <DataColumnGroupVisibilities>
+            <DataColumnGroupVisibility DisplayName="Feature Parameters" IsVisible="False" />
+          </DataColumnGroupVisibilities>
+        </Layer>
+        <Layer Type="MeshPerimeterLayer">
+          <DataColumnGroupVisibilities>
+            <DataColumnGroupVisibility DisplayName="Feature Parameters" IsVisible="True" />
+          </DataColumnGroupVisibilities>
+        </Layer>
+        <Layer Name="Culvert Groups" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="" />
+        <Layer Name="Culvert Barrels" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="Bridges/Culverts" />
+        <Layer Name="Gate Groups" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="" />
+        <Layer Name="Gate Openings" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="Inline Structures" />
+        <Layer Name="Culvert Groups" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="" />
+        <Layer Name="Culvert Barrels" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="Inline Structures" />
+        <Layer Name="Rating Curve Outlets" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="Inline Structures" />
+        <Layer Name="Outlet Time Series" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="Inline Structures" />
+        <Layer Name="Gate Groups" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="" />
+        <Layer Name="Gate Openings" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="Lateral Structures" />
+        <Layer Name="Culvert Groups" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="" />
+        <Layer Name="Culvert Barrels" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="Lateral Structures" />
+        <Layer Name="Rating Curve Outlets" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="Lateral Structures" />
+        <Layer Name="Outlet Time Series" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="Lateral Structures" />
+        <Layer Name="Gate Groups" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="" />
+        <Layer Name="Gate Openings" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="SA/2D Connections" />
+        <Layer Name="Culvert Groups" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="" />
+        <Layer Name="Culvert Barrels" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="SA/2D Connections" />
+        <Layer Name="Rating Curve Outlets" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="SA/2D Connections" />
+        <Layer Name="Outlet Time Series" Type="VirtualGeometryFeatureLayer" ParentIdentifiers="SA/2D Connections" />
+        <Layer Type="StructureLayer" UnitsRiverStation="Feet" RiverStationDecimalPlaces="0" />
+        <Layer Type="FinalNValueLayer">
+          <ResampleMethod>near</ResampleMethod>
+          <Surface On="True" />
+        </Layer>
+        <Layer Name="TEMP N-Value Rasterizer" Type="InterpretationRasterizerLayer">
+          <ResampleMethod>near</ResampleMethod>
+          <Surface On="True" />
+        </Layer>
+        <Layer Name="Final Values" Type="InterpretationRasterizerLayer">
+          <ResampleMethod>near</ResampleMethod>
+          <Surface On="True" />
+        </Layer>
+        <Layer Name="Final Values" Type="InterpretationRasterizerLayer">
+          <ResampleMethod>near</ResampleMethod>
+          <Surface On="True" />
+        </Layer>
+      </Layer>
+      <Layer Name="Depth" Type="RASResultsMap" Checked="True">
+        <MapParameters MapType="depth" ProfileIndex="2147483647" ProfileName="Max" />
+      </Layer>
+      <Layer Name="Velocity" Type="RASResultsMap">
+        <MapParameters MapType="velocity" ProfileIndex="2147483647" ProfileName="Max" />
       </Layer>
       <Layer Name="WSE" Type="RASResultsMap">
         <MapParameters MapType="elevation" ProfileIndex="2147483647" ProfileName="Max" />
