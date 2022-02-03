@@ -70,5 +70,45 @@ $$
 
 ## Final calculus 
 
-In order to find the right $D$, we used a calculus by iteration. 
+In order to find the right $D$, we used a calculus by iteration. We start our loop with $D=4$ m
+
+```python
+from math import *
+##Initialisation
+Q=70
+g=9.81
+H0=65
+P=9.2
+C=(Q**2)/(2*g*(H0-P))
+Ein=0.5
+Etrash=0.26
+Egates=0.1
+Eout=2
+Lambda=0.02
+Lp=49.61
+D=4
+print(D)
+##Loop to iterate
+for k in range(10):
+    F=sqrt(C*(Ein+Etrash+Egates+Eout+1+((Lambda*Lp)/(D))))
+    D=sqrt(F)
+    print(D)
+```
+
+For a 10 loop iteration we have the following results :
+
+```python
+2.0707355989956264
+2.0992635758413654
+2.0984755778874224
+2.0984970679599178
+2.098496481683014
+2.0984964976772513
+2.0984964972409115
+2.0984964972528153
+2.0984964972524907
+2.0984964972524995
+```
+
+We can therefore conclude that : ==$D=2,1$ m==
 
